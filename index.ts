@@ -52,8 +52,8 @@ function printTree(node: ts.Node) {
             if(ts.isLiteralExpression(accesor))
             {
                 console.log(`${padding} literal access detected!`)
-                // value is the whatever symbolically sits at source[accesor]
-                // so... the question is: do we have the defiintion of source as a literal in the same file
+                // TODO: only do the replacement if source is an array/object literal!
+                // TODO: add an example for object literal see if it works
                 return
             }                
         }
